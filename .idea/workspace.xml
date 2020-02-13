@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
-    <generated />
+    <generated>
+      <config projectName="data-structures-algorithms" targetName="data-structures-algorithms" />
+    </generated>
   </component>
   <component name="CMakeSettings">
     <configurations>
@@ -9,7 +11,11 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="48fb81b5-b9fd-483f-b7c5-d8d88d1950ea" name="Default Changelist" comment="" />
+    <list default="true" id="48fb81b5-b9fd-483f-b7c5-d8d88d1950ea" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/queue.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,7 +24,12 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1XiS74hr2x3ta3lcV0hs0gXmvGE" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -36,7 +47,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
   <component name="RunManager">
-    <configuration name="untitled" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="untitled" TARGET_NAME="untitled" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="untitled" RUN_TARGET_NAME="untitled">
+    <configuration name="data-structures-algorithms" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="data-structures-algorithms" TARGET_NAME="data-structures-algorithms" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="data-structures-algorithms" RUN_TARGET_NAME="data-structures-algorithms">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -53,6 +64,7 @@
       <option name="presentableId" value="Default" />
       <updated>1581527250914</updated>
       <workItem from="1581527252841" duration="3372000" />
+      <workItem from="1581594250777" duration="2850000" />
     </task>
     <servers />
   </component>
@@ -60,25 +72,45 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1398" height="230" key="GridCell.Tab.0.bottom" timestamp="1581594124471">
+    <state width="1388" height="230" key="GridCell.Tab.0.bottom" timestamp="1581612309179">
       <screen x="-1440" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="230" key="GridCell.Tab.0.bottom/-1440.23.1440.877/1920.-178.1080.1897/0.23.1920.978@-1440.23.1440.877" timestamp="1581594124471" />
-    <state width="1398" height="230" key="GridCell.Tab.0.center" timestamp="1581594124470">
+    <state width="1388" height="230" key="GridCell.Tab.0.bottom/-1440.23.1440.877/1920.-178.1080.1897/0.23.1920.978@-1440.23.1440.877" timestamp="1581612309179" />
+    <state width="1388" height="230" key="GridCell.Tab.0.center" timestamp="1581612309178">
       <screen x="-1440" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="230" key="GridCell.Tab.0.center/-1440.23.1440.877/1920.-178.1080.1897/0.23.1920.978@-1440.23.1440.877" timestamp="1581594124470" />
-    <state width="1398" height="230" key="GridCell.Tab.0.left" timestamp="1581594124469">
+    <state width="1388" height="230" key="GridCell.Tab.0.center/-1440.23.1440.877/1920.-178.1080.1897/0.23.1920.978@-1440.23.1440.877" timestamp="1581612309178" />
+    <state width="1388" height="230" key="GridCell.Tab.0.left" timestamp="1581612309178">
       <screen x="-1440" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="230" key="GridCell.Tab.0.left/-1440.23.1440.877/1920.-178.1080.1897/0.23.1920.978@-1440.23.1440.877" timestamp="1581594124469" />
-    <state width="1398" height="230" key="GridCell.Tab.0.right" timestamp="1581594124470">
+    <state width="1388" height="230" key="GridCell.Tab.0.left/-1440.23.1440.877/1920.-178.1080.1897/0.23.1920.978@-1440.23.1440.877" timestamp="1581612309178" />
+    <state width="1388" height="230" key="GridCell.Tab.0.right" timestamp="1581612309179">
       <screen x="-1440" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="230" key="GridCell.Tab.0.right/-1440.23.1440.877/1920.-178.1080.1897/0.23.1920.978@-1440.23.1440.877" timestamp="1581594124470" />
+    <state width="1388" height="230" key="GridCell.Tab.0.right/-1440.23.1440.877/1920.-178.1080.1897/0.23.1920.978@-1440.23.1440.877" timestamp="1581612309179" />
+    <state width="1388" height="285" key="GridCell.Tab.1.bottom" timestamp="1581612308888">
+      <screen x="-1440" y="23" width="1440" height="877" />
+    </state>
+    <state width="1388" height="285" key="GridCell.Tab.1.bottom/-1440.23.1440.877/1920.-178.1080.1897/0.23.1920.978@-1440.23.1440.877" timestamp="1581612308888" />
+    <state width="1388" height="285" key="GridCell.Tab.1.center" timestamp="1581612308887">
+      <screen x="-1440" y="23" width="1440" height="877" />
+    </state>
+    <state width="1388" height="285" key="GridCell.Tab.1.center/-1440.23.1440.877/1920.-178.1080.1897/0.23.1920.978@-1440.23.1440.877" timestamp="1581612308887" />
+    <state width="1388" height="285" key="GridCell.Tab.1.left" timestamp="1581612308887">
+      <screen x="-1440" y="23" width="1440" height="877" />
+    </state>
+    <state width="1388" height="285" key="GridCell.Tab.1.left/-1440.23.1440.877/1920.-178.1080.1897/0.23.1920.978@-1440.23.1440.877" timestamp="1581612308887" />
+    <state width="1388" height="285" key="GridCell.Tab.1.right" timestamp="1581612308888">
+      <screen x="-1440" y="23" width="1440" height="877" />
+    </state>
+    <state width="1388" height="285" key="GridCell.Tab.1.right/-1440.23.1440.877/1920.-178.1080.1897/0.23.1920.978@-1440.23.1440.877" timestamp="1581612308888" />
     <state x="639" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1581527252999">
       <screen x="0" y="23" width="1920" height="978" />
     </state>
     <state x="639" y="344" key="com.intellij.ide.util.TipDialog/-1440.23.1440.877/1920.-178.1080.1897/0.23.1920.978@0.23.1920.978" timestamp="1581527252999" />
+    <state x="-990" y="98" key="refactoring.ChangeSignatureDialog" timestamp="1581612345248">
+      <screen x="-1440" y="23" width="1440" height="877" />
+    </state>
+    <state x="-990" y="98" key="refactoring.ChangeSignatureDialog/-1440.23.1440.877/1920.-178.1080.1897/0.23.1920.978@-1440.23.1440.877" timestamp="1581612345248" />
   </component>
 </project>
