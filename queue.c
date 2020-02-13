@@ -30,7 +30,7 @@ int main() {
     }
 
     //remove
-    while (i % MAX != 5) {
+    while (!isEmpty(q)) {
         dequeue(q);
     }
 
