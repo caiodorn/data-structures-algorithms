@@ -67,9 +67,10 @@ void dequeue(queue *q) {
     }
 }
 
-
 bool isEmpty(queue *q) {
     return q->back == -1;
 }
 
-bool hasOneLeft(queue *q) { return q->front == q->back; }
+bool hasOneLeft(queue *q) {
+    return q->front == q->back;
+}
