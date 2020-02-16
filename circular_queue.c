@@ -70,13 +70,9 @@ void enqueue(int item, queue *q) {
     if (!isFull(q)) {
         if (isEmpty(q)) {
             q->front++;
-            q->back = q->front;
-            q->items[q->back] = item;
-        } else if (q->back == MAX - 1) {
-            q->items[q->back = 0] = item;
-        } else {
-            q->items[++q->back] = item;
         }
+        q->back = (q->back + 1) % MAX;
+        q->items[q->back] = item;
         printf("Enqueued element {%d} at index {%d}\n", item, q->back);
     }
 }
@@ -86,10 +82,8 @@ void dequeue(queue *q) {
         printf("Dequeued element {%d} from index {%d}\n", q->items[q->front], q->front);
         if (hasOneLeft(q)) {
             initialize(q);
-        } else if (q->front == MAX - 1) {
-                q->front = 0;
         } else {
-            q->front++;
+            q->front = (q->front + 1) % MAX;
         }
     }
     printf("Front index -> %d, Back index -> %d\n", q->front, q->back);
