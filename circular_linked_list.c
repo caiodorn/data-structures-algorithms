@@ -24,7 +24,7 @@ int main() {
 
     removeNode(2, &head);
     removeNode(1, &head);
-    removeNode(4, &head);
+    removeNode(4, &head); // will remove nothing as this is now an invalid index
     removeNode(3, &head);
 
     printNodes(head);
@@ -34,6 +34,9 @@ void printNodes(node *head) {
     node *current = head;
     while (current != NULL) {
         printf("Addr: %p\nVal: %d\nNext: %p\n\n", current, current->val, current->next);
+        if (current->next == head) {
+            break;
+        }
         current = current->next;
     }
 }
@@ -48,11 +51,13 @@ node * createNode(int val) {
 void addNode(node *new, node **head) {
     node *current = *head;
     if (current == NULL) {
+        new->next = new;
         *head = new;
     } else {
-        while (current->next != NULL) {
+        while (current->next != *head) {
             current = current->next;
         }
+        new->next = *head;
         current->next = new;
     }
 }
@@ -62,24 +67,30 @@ void removeNode(int index, node **head) {
         node *current = *head;
         node *previous = NULL;
         int i = 1;
-        for (; i < index && current != NULL; i++) {
+        for (; i < index && current->next != *head; i++) {
             previous = current;
             current = current->next;
         }
-        if (i == index && current != NULL) { //if index found (thus valid)
+        if (i == index) { //if index found (thus valid)
             if (current == *head) { //first node
-                if (current->next != NULL) {
+                if (current->next != *head) {
                     printf("Removing first node!\n\n");
-                    *head = current->next;
-                } else {
+                    node *last = current;
+                    while (last->next != *head) { //navigate to last node...
+                        last = last->next;
+                    }
+                    *head = (*head)->next;
+                    last->next = *head; //make it point to the updated head ref
+                } else { //has only one node
+                    printf("List is now empty!\n\n");
                     *head = NULL;
                 }
-            } else if (current->next != NULL) { //intermediate node
+            } else if (current->next != *head) { //intermediate node
                 printf("Removing intermediate node!\n\n");
                 previous->next = current->next;
             } else { //last node
                 printf("Removing last node!\n\n");
-                previous->next = NULL;
+                previous->next = *head;
             }
             free(current);
             printf("Removed Addr: %p\nVal: %d\nNext: %p\n\n", current, current->val, current->next);
@@ -90,4 +101,3 @@ void removeNode(int index, node **head) {
         printf("List has no nodes!\n\n");
     }
 }
-
