@@ -10,7 +10,7 @@ void printNodes(node *head);
 void addNode(node *new, node **head);
 node * createNode(int val);
 void removeNode(int index, node **head);
-void removeFirst(node **head, node *current);
+void removeFirst(node *current, node **head);
 
 int main() {
     node *head = NULL;
@@ -25,7 +25,7 @@ int main() {
 
     removeNode(2, &head);
     removeNode(1, &head);
-    removeNode(4, &head); // will remove nothing as this is now an invalid index
+    removeNode(4, &head);
     removeNode(3, &head);
 
     printNodes(head);
@@ -84,7 +84,7 @@ void removeNode(int index, node **head) {
         }
         if (i == index) {                        //if index found (thus valid)
             if (current == *head) {              //if first node
-                removeFirst(head, current);
+                removeFirst(current, head);
             } else if (current->next != *head) { //if intermediate node
                 printf("Removing intermediate node!\n\n");
                 previous->next = current->next;
@@ -102,7 +102,7 @@ void removeNode(int index, node **head) {
     }
 }
 
-void removeFirst(node **head, node *current) {
+void removeFirst(node *current, node **head) {
     if (current->next != *head) {
         printf("Removing first node!\n\n");
         node *last = current;
