@@ -103,8 +103,8 @@ void removeNode(int index, node **head) {
 }
 
 void removeFirst(node *current, node **head) {
+    printf("Removing first node!\n\n");
     if (current->next != *head) {
-        printf("Removing first node!\n\n");
         node *last = current;
         while (last->next != *head) { //navigate to last node...
             last = last->next;
