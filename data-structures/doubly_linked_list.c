@@ -2,11 +2,13 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-typedef struct node_st {
+struct node_st {
     int val;
     struct node_st *previous;
     struct node_st *next;
-} node;
+};
+
+typedef struct node_st node;
 
 void printNodes(node *ref, bool isBackwards);
 void addNode(node *new, node **head, node **tail);
@@ -15,7 +17,7 @@ void removeNode(int index, node **head);
 
 int main() {
     node *head = NULL;
-    node *tail = NULL; //keeping this reference for traversing backwards
+    node *tail = NULL; //for traversing backwards
 
     //creates and inserts 5 nodes
     int i = 1;
@@ -48,7 +50,7 @@ void printNodes(node *ref, bool isBackwards) {
 }
 
 node * createNode(int val) {
-    node *new = (node *) malloc(sizeof(node *));
+    node *new = (node *) malloc(sizeof(node));
     new->val = val;
     new->previous = NULL;
     new->next = NULL;

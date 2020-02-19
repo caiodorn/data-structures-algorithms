@@ -53,7 +53,7 @@ void printNodes(node *head) {
 }
 
 node * createNode(int val) {
-    node *new = (node *) malloc(sizeof(node *));
+    node *new = (node *) malloc(sizeof(node));
     new->val = val;
     new->next = NULL;
     return new;
